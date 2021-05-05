@@ -362,6 +362,8 @@ class ImagePainterState extends State<ImagePainter> {
                   valueListenable: _controller,
                   builder: (_, controller, __) {
                     return ImagePainterTransformer(
+                      maxScale: 2.4,
+                      minScale: 1,
                       panEnabled: controller.mode == PaintMode.none,
                       scaleEnabled: widget.isScalable,
                       onInteractionUpdate: (details) =>
@@ -370,7 +372,7 @@ class ImagePainterState extends State<ImagePainter> {
                           _scaleEndGesture(details, controller),
                       child: CustomPaint(
                         size: Size(
-                            _image.width.toDouble(), _image.height.toDouble()),
+                            MediaQuery.of(context).size.width, MediaQuery.of(context).size.height),
                         willChange: true,
                         isComplex: true,
                         painter: DrawImage(
