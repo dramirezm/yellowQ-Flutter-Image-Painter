@@ -43,7 +43,7 @@ const List<ModeData> paintModes = [
   //     icon: Icons.zoom_out_map, mode: PaintMode.none, label: "None / Zoom"),
   // ModeData(icon: Icons.horizontal_rule, mode: PaintMode.line, label: "Line"),
   // ModeData(icon: Icons.crop_free, mode: PaintMode.rect, label: "Rectangle"),
-  ModeData(icon: Icons.edit, mode: PaintMode0.freeStyle, label: "Drawing"),
+  ModeData(icon: Icons.edit, mode: PaintMode.freeStyle, label: "Drawing"),
   // ModeData(icon: Icons.lens_outlined, mode: PaintMode.circle, label: "Circle"),
   // ModeData(
   //     icon: Icons.arrow_right_alt_outlined,
