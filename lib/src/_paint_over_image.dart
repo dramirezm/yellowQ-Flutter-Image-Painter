@@ -33,7 +33,7 @@ class ImagePainter extends StatefulWidget {
     this.colorIcon,
     this.undoIcon,
     this.isSignature = false,
-    this.controlsAtTop = true,
+    this.controlsAtTop = false,
     this.signatureBackgroundColor,
     this.colors,
   }) : super(key: key);
@@ -663,7 +663,8 @@ class ImagePainterState extends State<ImagePainter> {
       padding: const EdgeInsets.all(4),
       color: Colors.grey[200],
       child: Row(
-        children: [
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
           // ValueListenableBuilder<Controller>(
           //     valueListenable: _controller,
           //     builder: (_, _ctrl, __) {
