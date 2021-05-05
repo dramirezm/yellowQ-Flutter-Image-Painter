@@ -349,8 +349,8 @@ class ImagePainterState extends State<ImagePainter> {
   ///paints image on given constrains for drawing if image is not null.
   Widget _paintImage() {
     return Container(
-      height: widget.height ?? double.maxFinite,
-      width: widget.width ?? double.maxFinite,
+      height: MediaQuery.of(context).size.height,
+      width:MediaQuery.of(context).size.width,
       child: Column(
         children: [
           if (widget.controlsAtTop) _buildControls(),
