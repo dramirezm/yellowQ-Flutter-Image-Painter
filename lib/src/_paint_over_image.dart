@@ -702,15 +702,15 @@ class ImagePainterState extends State<ImagePainter> {
                   itemBuilder: (_) => [_showColorPicker(controller)],
                 );
               }),
-          PopupMenuButton(
-            tooltip: "Change Brush Size",
-            shape: ContinuousRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            icon:
-                widget.brushIcon ?? Icon(Icons.brush, color: Colors.grey[700]),
-            itemBuilder: (_) => [_showRangeSlider()],
-          ),
+          // PopupMenuButton(
+          //   tooltip: "Change Brush Size",
+          //   shape: ContinuousRectangleBorder(
+          //     borderRadius: BorderRadius.circular(20),
+          //   ),
+          //   icon:
+          //       widget.brushIcon ?? Icon(Icons.brush, color: Colors.grey[700]),
+          //   itemBuilder: (_) => [_showRangeSlider()],
+          // ),
           // IconButton(
           //     icon: const Icon(Icons.text_format), onPressed: _openTextDialog),
           // const Spacer(),
