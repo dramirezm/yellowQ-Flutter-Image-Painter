@@ -664,22 +664,22 @@ class ImagePainterState extends State<ImagePainter> {
       color: Colors.grey[200],
       child: Row(
         children: [
-          ValueListenableBuilder<Controller>(
-              valueListenable: _controller,
-              builder: (_, _ctrl, __) {
-                return PopupMenuButton(
-                  tooltip: "Change mode",
-                  shape: ContinuousRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                  icon: Icon(
-                      paintModes
-                          .firstWhere((item) => item.mode == _ctrl.mode)
-                          .icon,
-                      color: Colors.grey[700]),
-                  itemBuilder: (_) => [_showOptionsRow(_ctrl)],
-                );
-              }),
+          // ValueListenableBuilder<Controller>(
+          //     valueListenable: _controller,
+          //     builder: (_, _ctrl, __) {
+          //       return PopupMenuButton(
+          //         tooltip: "Change mode",
+          //         shape: ContinuousRectangleBorder(
+          //           borderRadius: BorderRadius.circular(40),
+          //         ),
+          //         icon: Icon(
+          //             paintModes
+          //                 .firstWhere((item) => item.mode == _ctrl.mode)
+          //                 .icon,
+          //             color: Colors.grey[700]),
+          //         itemBuilder: (_) => [_showOptionsRow(_ctrl)],
+          //       );
+          //     }),
           ValueListenableBuilder<Controller>(
               valueListenable: _controller,
               builder: (_, controller, __) {
@@ -710,9 +710,9 @@ class ImagePainterState extends State<ImagePainter> {
                 widget.brushIcon ?? Icon(Icons.brush, color: Colors.grey[700]),
             itemBuilder: (_) => [_showRangeSlider()],
           ),
-          IconButton(
-              icon: const Icon(Icons.text_format), onPressed: _openTextDialog),
-          const Spacer(),
+          // IconButton(
+          //     icon: const Icon(Icons.text_format), onPressed: _openTextDialog),
+          // const Spacer(),
           IconButton(
               tooltip: "Undo",
               icon:
@@ -756,7 +756,7 @@ class Controller {
   const Controller(
       {this.strokeWidth = 4.0,
       this.color = Colors.red,
-      this.mode = PaintMode.line,
+      this.mode = PaintMode.freeStyle,
       this.paintStyle = PaintingStyle.stroke,
       this.text = ""});
 
