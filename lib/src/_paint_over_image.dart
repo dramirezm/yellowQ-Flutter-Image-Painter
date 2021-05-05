@@ -33,7 +33,7 @@ class ImagePainter extends StatefulWidget {
     this.colorIcon,
     this.undoIcon,
     this.isSignature = false,
-    this.controlsAtTop = false,
+    this.controlsAtTop = true,
     this.signatureBackgroundColor,
     this.colors,
   }) : super(key: key);
@@ -349,8 +349,8 @@ class ImagePainterState extends State<ImagePainter> {
   ///paints image on given constrains for drawing if image is not null.
   Widget _paintImage() {
     return Container(
-      height: MediaQuery.of(context).size.height,
-      width:MediaQuery.of(context).size.width,
+      height: widget.height ?? double.maxFinite,
+      width: widget.width ?? double.maxFinite,
       child: Column(
         children: [
           if (widget.controlsAtTop) _buildControls(),
@@ -372,7 +372,7 @@ class ImagePainterState extends State<ImagePainter> {
                           _scaleEndGesture(details, controller),
                       child: CustomPaint(
                         size: Size(
-                            MediaQuery.of(context).size.width, MediaQuery.of(context).size.height),
+                            _image.width.toDouble(), _image.height.toDouble()),
                         willChange: true,
                         isComplex: true,
                         painter: DrawImage(
